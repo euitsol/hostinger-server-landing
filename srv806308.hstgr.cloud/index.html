@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>European IT Solutions - Portal Access</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Container styles */
+        .container {
+            width: 100%;
+            max-width: 64rem;
+            /* 1024px */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            /* 48px */
+        }
+
+        /* Logo styles */
+        .logo-container {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .logo {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Text styles */
+        .text-center {
+            text-align: center;
+        }
+
+        .welcome-text h1 {
+            font-size: 1.875rem;
+            /* 30px */
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .welcome-text h1 {
+                font-size: 2.25rem;
+                /* 36px */
+            }
+        }
+
+        .welcome-text p {
+            font-size: 1.125rem;
+            /* 18px */
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+
+        /* Button container */
+        .button-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            /* 24px */
+            width: 100%;
+            max-width: 32rem;
+            /* 512px */
+        }
+
+        @media (min-width: 768px) {
+            .button-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Button styles */
+        .button-link {
+            width: 100%;
+            text-decoration: none;
+        }
+
+        .button {
+            width: 100%;
+            height: 4rem;
+            /* 64px */
+            font-size: 1.125rem;
+            /* 18px */
+            font-weight: 500;
+            border-radius: 0.375rem;
+            /* 6px */
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+
+        .button-primary {
+            background-color: #0f172a;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background-color: #1e293b;
+        }
+
+        .button-outline {
+            background-color: transparent;
+            color: #0f172a;
+            border: 1px solid #e2e8f0;
+        }
+
+        .button-outline:hover {
+            background-color: #f8fafc;
+        }
+
+        /* Footer styles */
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.875rem;
+            /* 14px */
+            color: #6b7280;
+        }
+
+        /* Additional padding for larger screens */
+        @media (min-width: 768px) {
+            body {
+                padding: 6rem;
+                /* 96px */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="assets/img/euitsols-logo.webp" alt="European IT Solutions Logo" class="logo">
+        </div>
+
+        <!-- Welcome Text -->
+        <div class="welcome-text text-center">
+            <h1>Welcome to European IT Solutions</h1>
+            <p>Access your server below</p>
+        </div>
+
+        <!-- Portal Buttons -->
+        <div class="button-container">
+            <a href="https://srv806308.hstgr.cloud:8090/" target="_blank" rel="noopener noreferrer" class="button-link">
+                <button class="button button-primary">Access Server Portal</button>
+            </a>
+
+            <a href="https://srv806308.hstgr.cloud:8090/snappymail/" target="_blank" rel="noopener noreferrer"
+                class="button-link">
+                <button class="button button-outline">Access Webmail Portal</button>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© <span id="current-year"></span> European IT Solutions. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <!-- Simple script to update the year -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
